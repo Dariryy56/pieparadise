@@ -1,0 +1,38 @@
+:root {
+  --apple-com-semantic-heading-3-font-family: "Segoe UI", Helvetica;
+  --apple-com-semantic-heading-3-font-weight: 400;
+  --apple-com-semantic-heading-3-font-size: 12px;
+  --apple-com-semantic-heading-3-letter-spacing: -0.11999999731779099px;
+  --apple-com-semantic-heading-3-line-height: 16px;
+  --apple-com-semantic-heading-3-font-style: normal;
+  --apple-com-semantic-item-font-family: "Segoe UI", Helvetica;
+  --apple-com-semantic-item-font-weight: 400;
+  --apple-com-semantic-item-font-size: 12px;
+  --apple-com-semantic-item-letter-spacing: -0.11999999731779099px;
+  --apple-com-semantic-item-line-height: 16px;
+  --apple-com-semantic-item-font-style: normal;
+  --apple-com-semantic-link-font-family: "Segoe UI", Helvetica;
+  --apple-com-semantic-link-font-weight: 400;
+  --apple-com-semantic-link-font-size: 17px;
+  --apple-com-semantic-link-letter-spacing: -0.37400001287460327px;
+  --apple-com-semantic-link-line-height: 20px;
+  --apple-com-semantic-link-font-style: normal;
+  --apple-com-semantic-link-underline-font-family: "Segoe UI", Helvetica;
+  --apple-com-semantic-link-underline-font-weight: 400;
+  --apple-com-semantic-link-underline-font-size: 12px;
+  --apple-com-semantic-link-underline-letter-spacing: -0.11999999731779099px;
+  --apple-com-semantic-link-underline-line-height: 16px;
+  --apple-com-semantic-link-underline-font-style: normal;
+  --apple-com-arial-bold-font-family: "Arial", Helvetica;
+  --apple-com-arial-bold-font-weight: 700;
+  --apple-com-arial-bold-font-size: 18.8671875px;
+  --apple-com-arial-bold-letter-spacing: 0.23100000619888306px;
+  --apple-com-arial-bold-line-height: 25px;
+  --apple-com-arial-bold-font-style: normal;
+  --apple-com-segoe-UI-regular-font-family: "Segoe UI", Helvetica;
+  --apple-com-segoe-UI-regular-font-weight: 400;
+  --apple-com-segoe-UI-regular-font-size: 17px;
+  --apple-com-segoe-UI-regular-letter-spacing: 0px;
+  --apple-com-segoe-UI-regular-line-height: 36px;
+  --apple-com-segoe-UI-regular-font-style: normal;
+}

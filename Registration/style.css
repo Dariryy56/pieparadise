@@ -1,0 +1,1032 @@
+.div-wrapper {
+  background-color: #f5f4f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .div {
+  background-color: #f5f4f5;
+  overflow-x: hidden;
+  width: 1920px;
+  height: 2226px;
+  position: relative;
+}
+
+.div-wrapper .view {
+  position: absolute;
+  width: 1930px;
+  height: 294px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .overlap-group {
+  position: relative;
+  width: 1918px;
+  height: 294px;
+  background-color: #ffffff;
+}
+
+.div-wrapper .image {
+  position: absolute;
+  width: 381px;
+  height: 175px;
+  top: 14px;
+  left: 769px;
+  object-fit: cover;
+}
+
+.div-wrapper .text-wrapper {
+  top: 230px;
+  left: 601px;
+  font-weight: 600;
+  color: #c64243;
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-2 {
+  top: 230px;
+  left: 822px;
+  font-weight: 600;
+  color: #c64243;
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-3 {
+  top: 230px;
+  left: 1027px;
+  font-weight: 600;
+  color: #c64243;
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-4 {
+  top: 230px;
+  left: 1202px;
+  font-weight: 600;
+  color: #c64243;
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .element {
+  position: absolute;
+  top: 21px;
+  left: 201px;
+  font-family: "Playfair", Helvetica;
+  font-weight: 400;
+  color: #c64243;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .span {
+  font-weight: 500;
+}
+
+.div-wrapper .text-wrapper-5 {
+  font-family: "Playfair", Helvetica;
+  font-weight: 400;
+  color: #c64243;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.div-wrapper .text-wrapper-6 {
+  font-family: "Palatino Linotype-Regular", Helvetica;
+}
+
+.div-wrapper .text-wrapper-7 {
+  top: 21px;
+  left: 1534px;
+  font-weight: 600;
+  color: #c64243;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .overlap {
+  position: absolute;
+  width: 1927px;
+  height: 1932px;
+  top: 294px;
+  left: -3px;
+}
+
+.div-wrapper .view-2 {
+  position: absolute;
+  width: 1920px;
+  height: 312px;
+  top: 1206px;
+  left: 3px;
+  background-color: #771629;
+}
+
+.div-wrapper .view-3 {
+  position: absolute;
+  width: 1920px;
+  height: 850px;
+  top: 356px;
+  left: 3px;
+  background-color: #fff2f2;
+}
+
+.div-wrapper .overlap-wrapper {
+  position: absolute;
+  width: 932px;
+  height: 894px;
+  top: 456px;
+  left: 500px;
+}
+
+.div-wrapper .overlap-2 {
+  position: relative;
+  width: 926px;
+  height: 894px;
+  background-color: #b34556;
+  border-radius: 15px;
+}
+
+.div-wrapper .text-wrapper-8 {
+  top: 34px;
+  left: 70px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .overlap-group-wrapper {
+  position: absolute;
+  width: 443px;
+  height: 90px;
+  top: 326px;
+  left: 58px;
+}
+
+.div-wrapper .overlap-group-2 {
+  position: relative;
+  width: 441px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.div-wrapper .text-wrapper-9 {
+  top: 27px;
+  left: 26px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-4 {
+  position: absolute;
+  width: 795px;
+  height: 90px;
+  top: 225px;
+  left: 58px;
+}
+
+.div-wrapper .overlap-3 {
+  position: relative;
+  width: 793px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.div-wrapper .view-5 {
+  position: absolute;
+  width: 342px;
+  height: 90px;
+  top: 326px;
+  left: 511px;
+}
+
+.div-wrapper .overlap-4 {
+  position: relative;
+  width: 340px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.div-wrapper .text-wrapper-10 {
+  width: 150px;
+  top: 27px;
+  left: 20px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-6 {
+  position: absolute;
+  width: 443px;
+  height: 90px;
+  top: 124px;
+  left: 410px;
+
+}
+
+.div-wrapper .text-wrapper-11 {
+  top: 27px;
+  left: 298px;
+
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-7 {
+  position: absolute;
+  width: 342px;
+  height: 90px;
+  top: 124px;
+  left: 58px;
+ 
+}
+
+.div-wrapper .text-wrapper-12 {
+  width: 150px;
+  top: 27px;
+  left: 170px;
+  
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-8 {
+  position: absolute;
+  width: 795px;
+  height: 90px;
+  top: 474px;
+  left: 58px;
+}
+
+.div-wrapper .view-9 {
+  position: absolute;
+  width: 795px;
+  height: 90px;
+  top: 581px;
+  left: 58px;
+}
+
+.div-wrapper .view-10 {
+  position: absolute;
+  width: 255px;
+  height: 66px;
+  top: 693px;
+  left: 598px;
+}
+
+.div-wrapper .overlap-5 {
+  position: relative;
+  width: 253px;
+  height: 66px;
+  background-color: #771629;
+  border-radius: 15px;
+}
+
+.div-wrapper .text-wrapper-13 {
+  top: 15px;
+  left: 10px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #00000000;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #00000000;
+}
+
+.div-wrapper .text-wrapper-14 {
+  top: 726px;
+  left: 58px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-15 {
+  top: 805px;
+  left: 58px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-11 {
+  position: absolute;
+  width: 1927px;
+  height: 375px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .overlap-6 {
+  position: relative;
+  width: 1925px;
+  height: 375px;
+}
+
+.div-wrapper .img {
+  position: absolute;
+  width: 1925px;
+  height: 356px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .rectangle {
+  position: absolute;
+  width: 1923px;
+  height: 356px;
+  top: 2px;
+  left: 1px;
+  background-color: #00000024;
+}
+
+.div-wrapper .text-wrapper-16 {
+  position: absolute;
+  top: 109px;
+  left: 686px;
+  -webkit-text-stroke: 1px #ffffff;
+  font-family: "Great Vibes", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 130px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .line {
+  position: absolute;
+  width: 1920px;
+  height: 20px;
+  top: 355px;
+  left: 3px;
+}
+
+.div-wrapper .view-12 {
+  position: absolute;
+  width: 1924px;
+  height: 455px;
+  top: 1477px;
+  left: 3px;
+}
+
+.div-wrapper .overlap-7 {
+  position: relative;
+  width: 1920px;
+  height: 455px;
+}
+
+.div-wrapper .view-13 {
+  position: absolute;
+  width: 1920px;
+  height: 414px;
+  top: 41px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.div-wrapper .element-2 {
+  position: absolute;
+  top: 394px;
+  left: 732px;
+  font-family: "Playfair", Helvetica;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .line-2 {
+  position: absolute;
+  width: 1713px;
+  height: 2px;
+  top: 371px;
+  left: 105px;
+  object-fit: cover;
+}
+
+.div-wrapper .text-wrapper-17 {
+  width: 350px;
+  top: 202px;
+  left: 105px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .image-2 {
+  position: absolute;
+  width: 259px;
+  height: 119px;
+  top: 70px;
+  left: 77px;
+  object-fit: cover;
+}
+
+.div-wrapper .vector-wrapper {
+  position: absolute;
+  width: 81px;
+  height: 81px;
+  top: 0;
+  left: 920px;
+  background-color: #771629;
+  border-radius: 40.5px;
+}
+
+.div-wrapper .vector {
+  position: absolute;
+  width: 43px;
+  height: 60px;
+  top: 10px;
+  left: 19px;
+}
+
+.div-wrapper .view-14 {
+  position: absolute;
+  width: 217px;
+  height: 236px;
+  top: 98px;
+  left: 1448px;
+}
+
+.div-wrapper .text-wrapper-18 {
+  top: 0;
+  left: 4px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .overlap-8 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 196px;
+  left: 0;
+}
+
+.div-wrapper .ellipse {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 1px;
+  left: 1px;
+  background-color: #ffffff;
+  border-radius: 18.5px;
+}
+
+.div-wrapper .img-2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.div-wrapper .overlap-group-3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 196px;
+  left: 50px;
+}
+
+.div-wrapper .overlap-9 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 196px;
+  left: 99px;
+}
+
+.div-wrapper .ellipse-2 {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 1px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 18.5px;
+}
+
+.div-wrapper .text-wrapper-19 {
+  position: absolute;
+  top: 115px;
+  left: 4px;
+  font-family: "Playfair", Helvetica;
+  font-weight: 400;
+  color: #771629;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-20 {
+  position: absolute;
+  top: 79px;
+  left: 5px;
+  font-family: "Playfair", Helvetica;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-21 {
+  position: absolute;
+  width: 136px;
+  top: 39px;
+  left: 5px;
+  font-family: "Palatino Linotype-Regular", Helvetica;
+  font-weight: 400;
+  color: #771629;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .view-15 {
+  position: absolute;
+  width: 256px;
+  height: 222px;
+  top: 110px;
+  left: 1023px;
+}
+
+.div-wrapper .text-wrapper-22 {
+  top: 137px;
+  left: 16px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-23 {
+  top: 186px;
+  left: 16px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .overlap-10 {
+  position: absolute;
+  width: 247px;
+  height: 119px;
+  top: 0;
+  left: -1px;
+}
+
+.div-wrapper .text-wrapper-24 {
+  top: 40px;
+  left: 40px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-25 {
+  top: 83px;
+  left: 42px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .overlap-11 {
+  position: absolute;
+  width: 247px;
+  height: 103px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .text-wrapper-26 {
+  top: 0;
+  left: 17px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .vector-2 {
+  position: absolute;
+  width: 32px;
+  height: 86px;
+  top: 18px;
+  left: 0;
+}
+
+.div-wrapper .view-16 {
+  position: absolute;
+  width: 195px;
+  height: 219px;
+  top: 113px;
+  left: 664px;
+}
+
+.div-wrapper .overlap-12 {
+  position: relative;
+  width: 186px;
+  height: 219px;
+  left: -1px;
+}
+
+.div-wrapper .overlap-13 {
+  position: absolute;
+  width: 96px;
+  height: 205px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .text-wrapper-27 {
+  top: 0;
+  left: 16px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .vector-3 {
+  position: absolute;
+  width: 32px;
+  height: 185px;
+  top: 20px;
+  left: 0;
+}
+
+.div-wrapper .text-wrapper-28 {
+  top: 42px;
+  left: 40px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-29 {
+  top: 86px;
+  left: 40px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-30 {
+  top: 134px;
+  left: 40px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-31 {
+  top: 183px;
+  left: 40px;
+  font-weight: 400;
+  color: #771629;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+
+.scroll-to-top {
+   margin-left: -13px;
+    background-color: #ffffff00; /* Цвет фона */
+    color: rgba(255, 255, 255, 0); /* Цвет текста */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Скругление углов */
+    padding: 35px 35px; /* Отступы */
+}
+
+
+
+.screen .freepik-adjust {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 5px;
+  left: 0;
+}
+
+.Label-1 {
+  width: 320px; 
+  height: 90px;
+  box-sizing: border-box; 
+  top: 0px;
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ff000000;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+.Label-1::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-2::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-3::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-4::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-5::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-6::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+.Label-7::placeholder{
+  color: #771629; /* Цвет placeholder */
+  opacity: 1; /* Убедитесь, что opacity равен 1 для полной видимости */
+}
+
+
+.Label-2 {
+  width: 420px; 
+  height: 90px;
+  box-sizing: border-box; 
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+
+.Label-3 {
+  width: 770px; 
+  height: 90px;
+  box-sizing: border-box; 
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+
+.Label-4 {
+  width: 420px; 
+  height: 90px;
+  box-sizing: border-box; 
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+.Label-5 {
+  width: 315px; 
+  height: 90px;
+  box-sizing: border-box; 
+left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+.Label-6 {
+  width: 770px; 
+  height: 90px;
+  box-sizing: border-box; 
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+.Label-7 {
+ width: 770px; 
+  height: 90px;
+  box-sizing: border-box; 
+  left: 10px;
+  font-family: "Playfair", Helvetica;
+  font-size: 30px;
+  background-color: #ffe5e500;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+  border: #ffffff00; 
+  color: #771629;
+}
+
+
+
+
+
+/* Кнопка "Наверх" при наведении */
+.view-wrapper:hover {
+    background-color: #c64243;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+/* Эффекты для пунктов меню в шапке */
+.view-15 a div {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+
+.view-15 a div:after {
+    display: none;
+}
+
+/* Эффекты для ссылок в подвале */
+.view-14 a div,
+.view-15 a div,
+.view-16 a div {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.view-14 a:hover div,
+.view-15 a:hover div,
+.view-16 a:hover div {
+    transform: translateY(-3px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: #dd1141;
+}
+
