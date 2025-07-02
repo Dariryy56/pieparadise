@@ -9,9 +9,6 @@
   <script src="script.js" defer></script>
   <title>PieParadise</title>
 </head>
-
-<body>
-
   <body>
     <?php session_start();
     if (!isset($_SESSION['user'])) {
@@ -70,24 +67,24 @@
 
 
               <div class="overlap-3"> <input type="text" name="first_name" class="Label-4"
-                  value="<?= htmlspecialchars($user['first_name']) ?>" id="first_name" />
+                  value="<?= htmlspecialchars($user['first_name']) ?>" id="first_name" required/>
                 <div class="text-wrapper-15">Имя</div> <img class="line-4"
                   src="https://c.animaapp.com/DVzIvYLH/img/line-26.svg" />
               </div>
             </div>
             <div class="view-8">
               <div class="text-wrapper-13">Фамилия</div> <input type="text" name="last_name" class="Label-5"
-                value="<?= htmlspecialchars($user['last_name']) ?>" id="last_name" /> <img class="line-5"
+                value="<?= htmlspecialchars($user['last_name']) ?>" id="last_name" required/> <img class="line-5"
                 src="https://c.animaapp.com/DVzIvYLH/img/line-27.svg" />
             </div>
             <div class="view-80">
               <div class="text-wrapper-13">Телефон</div> <input type="text" name="phone" class="Label-7"
-                value="<?= htmlspecialchars($user['phone']) ?>" id="phone" /> <img class="line-5"
+                value="<?= htmlspecialchars($user['phone']) ?>" id="phone" required/> <img class="line-5"
                 src="https://c.animaapp.com/DVzIvYLH/img/line-27.svg" />
             </div>
             <div class="view-4">
               <div class="text-wrapper-12">Логин</div> <input type="text" name="username" class="Label-1"
-                value="<?= htmlspecialchars($user['username']) ?>" id="username" /> <img class="line-4"
+                value="<?= htmlspecialchars($user['username']) ?>" id="username" required/> <img class="line-4"
                 src="https://c.animaapp.com/DVzIvYLH/img/line-26.svg" />
             </div>
             <div class="view-5">
@@ -95,16 +92,16 @@
                 value="<?= htmlspecialchars($user['email']) ?>" id="email" /> <img class="line-2"
                 src="https://c.animaapp.com/DVzIvYLH/img/line-29.svg" />
             </div>
-            <div class="view-6">
+            <div class="view-6"> 
               <div class="overlap-group-2">
                 <div class="text-wrapper-13">Пароль</div> <input type="password" name="password" class="Label-3"
-                  value="" id="password" /> <img class="line-3"
+                  value="<?= htmlspecialchars($user['password']) ?>" id="password" required/> <img class="line-3"
                   src="https://c.animaapp.com/DVzIvYLH/img/line-30.svg" />
               </div>
             </div>
             <div class="view-9" id="confirmPasswordDiv" style="display:none;">
               <div class="text-wrapper-13">Подтвердите пароль</div> <input type="password" name="confirm_password"
-                class="Label-8" value="" id="confirm_password" /> <img class="line-3"
+                class="Label-8" value="" id="confirm_password" required/> <img class="line-3"
                 src="https://c.animaapp.com/DVzIvYLH/img/line-30.svg" />
             </div>
             <div id="errorMessages" class="text-wrapper-800">

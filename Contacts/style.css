@@ -942,15 +942,22 @@
 }
 
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  top: 1005px;
-}
 
-.success-message {
-  color: green;
-  font-size: 16px;
-  margin-top: 1005px;
-  text-align: center;
-}
+    .success-message {
+        color: #4CAF50;
+        background: #e8f5e9;
+        padding: 12px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border: 1px solid #c8e6c9;
+        text-align: center;
+    }
+    
+    .error-message {
+        color: #f44336;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+
+    

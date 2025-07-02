@@ -442,7 +442,6 @@
   width: 2165px;
   height: 1234px;
   top: 2089px;
-  left: 0;
 }
 
 .screen .overlap-5 {
@@ -465,7 +464,7 @@
   width: 370px;
   height: 184px;
   top: 0;
-  left: 787px;
+  left: 786px;
 }
 
 .screen .view-9 {
@@ -485,7 +484,7 @@
   width: 642px;
   height: 644px;
   top: 20px;
-  left: 69px;
+  left: 68px;
   border-radius: 321.16px / 322px;
   position: absolute;
   border: 10px solid;
@@ -917,6 +916,7 @@
   height: 145px;
   top: 188px;
   left: 0;
+  border-radius: 10%;
 }
 
 .screen .image-10 {
@@ -2235,7 +2235,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.4);
+  background: #ff002652;
   border-radius: 50%;
   transform: scale(0);
   animation: wave 0.6s linear;
@@ -2284,5 +2284,138 @@
     transform: translateY(-3px);
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     color: #dd1141;
+}
+
+/* Стили для карточек "Новые товары" */
+.element-7 .overlap-6 {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center bottom;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* Эффект при наведении - плавное всплытие */
+.element-7 .overlap-6:hover {
+    transform: translateY(-8px);
+    z-index: 10;
+}
+
+
+.element-7 .overlap-6:hover::before {
+    opacity: 1;
+}
+
+
+
+.element-7 .overlap-6:hover::after {
+    opacity: 1;
+}
+
+.element-7 .overlap-6 .side-glow {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 5px;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.element-7 .overlap-6:hover .side-glow {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Усиление тени при наведении */
+.element-7 .overlap-6:hover {
+    box-shadow: 0 10px 20px  #c94559a1 ;
+}
+
+
+
+
+
+
+
+
+
+/* Анимация для изображений внутри карточек */
+.element-7 .overlap-6 img {
+    transition: transform 0.5s ease;
+}
+
+.element-7 .overlap-6:hover img {
+    transform: scale(1.03);
+}
+
+/* Увеличение названия при наведении */
+.element-7 .overlap-6 .text-wrapper-11,
+.element-7 .overlap-6 .text-wrapper-14,
+.element-7 .overlap-6 .text-wrapper-17,
+.element-7 .overlap-6 .text-wrapper-20 {
+    transition: all 0.3s ease;
+}
+
+.element-7 .overlap-6:hover .text-wrapper-11,
+.element-7 .overlap-6:hover .text-wrapper-14,
+.element-7 .overlap-6:hover .text-wrapper-17,
+.element-7 .overlap-6:hover .text-wrapper-20 {
+    font-size: 42px;
+    color: #dd1141;
+}
+
+/* Добавляем боковые подсветки в HTML */
+.element-7 .element-8 .overlap-6,
+.element-7 .element-9 .overlap-6,
+.element-7 .element-10 .overlap-6,
+.element-7 .element-11 .overlap-6 {
+    position: relative;
+}
+
+.element-7 .element-8 .overlap-6::after,
+.element-7 .element-9 .overlap-6::after,
+.element-7 .element-10 .overlap-6::after,
+.element-7 .element-11 .overlap-6::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    width: 5px;
+    height: 80%;
+    background: linear-gradient(
+        to right, 
+       rgba(255, 0, 60, 0.993) 0%, 
+        rgba(25, 0, 255, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.element-7 .element-8 .overlap-6 .side-glow,
+.element-7 .element-9 .overlap-6 .side-glow,
+.element-7 .element-10 .overlap-6 .side-glow,
+.element-7 .element-11 .overlap-6 .side-glow {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 5px;
+    height: 80%;
+    background: linear-gradient(
+        to left, 
+       rgba(255, 0, 60, 0.993) 0%, 
+        rgba(25, 0, 255, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
 }
 

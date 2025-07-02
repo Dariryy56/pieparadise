@@ -56,18 +56,23 @@ function validate_name($name) {
     return preg_match('/^[А-ЯЁ][а-яё]+$/u', $name);
 }
 
+   // Проверка уникальности username (логина), исключая текущего пользователя
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE username = ? AND id != ?");
+    $stmt->execute([$data['username'], $user['id']]);
+    if ($stmt->fetchColumn() > 0) {
+        $errors[] = "Такой логин уже существует";
+    }
+
+    // Проверка уникальности email, исключая текущего пользователя
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ? AND id != ?");
+    $stmt->execute([$data['email'], $user['id']]);
+    if ($stmt->fetchColumn() > 0) {
+        $errors[] = "Такой email уже существует";
+    }
+
     if (empty($errors)) {
         try {
-            // Обновленный запрос с правильным порядком полей
-            $stmt = $pdo->prepare("UPDATE users SET 
-                username = ?,
-                email = ?,
-                first_name = ?,
-                last_name = ?,
-                phone = ?,
-                password = ?
-                WHERE id = ?");
-            
+            $stmt = $pdo->prepare("UPDATE users SET username = ?, email = ?, first_name = ?, last_name = ?, phone = ?, password = ? WHERE id = ?");
             if ($stmt->execute([
                 $data['username'],
                 $data['email'],
@@ -77,7 +82,7 @@ function validate_name($name) {
                 $data['password'],
                 $user['id']
             ])) {
-                // Обновляем данные в сессии
+                // Обновляем сессию
                 $_SESSION['user'] = array_merge($user, [
                     'username' => $data['username'],
                     'email' => $data['email'],
@@ -86,7 +91,6 @@ function validate_name($name) {
                     'phone' => $data['phone'],
                     'password' => $data['password']
                 ]);
-                
                 $_SESSION['success'] = "Данные успешно сохранены";
                 header("Location: ../account/account2.php");
                 exit();
@@ -95,7 +99,7 @@ function validate_name($name) {
             $errors[] = "Ошибка базы данных: " . $e->getMessage();
         }
     }
-    
+
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
     }

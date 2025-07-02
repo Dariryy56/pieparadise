@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     input.type = 'password';
     // Не очищаем значение, если оно есть
     if (!input.value) {
-        input.placeholder = '********';
+        input.placeholder = '***';
     }
 }
     });
@@ -22,37 +22,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Переключение режима редактирования
 function toggleEditing() {
-    const inputs = document.querySelectorAll('#accountForm input');
-    const editBtn = document.getElementById('editBtn');
-    const saveBtn = document.getElementById('saveBtn');
-    const confirmDiv = document.getElementById('confirmPasswordDiv');
-    
-    if (editBtn.style.display !== 'none') {
-        // Включаем редактирование
-        inputs.forEach(input => {
-            input.readOnly = false;
-            if (input.name === 'password') {
-                input.placeholder = 'Новый пароль';
-                input.value = ''; 
-            }
-        });
-        confirmDiv.style.display = 'block';
-        editBtn.style.display = 'none';
-        saveBtn.style.display = 'block';
-    } else {
-        // Выключаем редактирование
-        inputs.forEach(input => {
-            input.readOnly = true;
-            if (input.name === 'password') {
-                input.type = 'password';
-                input.placeholder = '********';
-                input.value = ''; 
-            }
-        });
-        confirmDiv.style.display = 'none';
-        editBtn.style.display = 'block';
-        saveBtn.style.display = 'none';
-    }
+  const inputs = document.querySelectorAll('#accountForm input');
+  const editBtn = document.getElementById('editBtn');
+  const saveBtn = document.getElementById('saveBtn');
+  const confirmDiv = document.getElementById('confirmPasswordDiv');
+
+  if (editBtn.style.display !== 'none') {
+    // Включаем редактирование
+    inputs.forEach(input => {
+      if (input.name === 'password') {
+        input.readOnly = true; // пароль изначально только для чтения
+        input.type = 'password';
+        input.placeholder = 'Нажмите, чтобы изменить пароль';
+        // НЕ очищаем значение
+      } else {
+        input.readOnly = false;
+      }
+      input.disabled = false;
+    });
+    confirmDiv.style.display = 'block';
+    editBtn.style.display = 'none';
+    saveBtn.style.display = 'block';
+
+    // Добавляем обработчик клика на поле пароля для разблокировки и очистки
+    const passwordInput = document.querySelector('input[name="password"]');
+    passwordInput.addEventListener('focus', function onFocus() {
+      passwordInput.readOnly = false;
+      passwordInput.value = '';
+      passwordInput.placeholder = 'Новый пароль';
+      passwordInput.removeEventListener('focus', onFocus);
+    });
+  } else {
+    // Выключаем редактирование
+    inputs.forEach(input => {
+      input.readOnly = true;
+      input.disabled = false;
+      if (input.name === 'password') {
+        input.type = 'password';
+        input.placeholder = '';
+        // НЕ очищаем значение, чтобы пароль оставался видимым (хотя обычно пароль скрыт)
+        // Можно оставить значение, если хотите
+      }
+    });
+    confirmDiv.style.display = 'none';
+    editBtn.style.display = 'block';
+    saveBtn.style.display = 'none';
+  }
 }
 
 document.getElementById('accountForm').addEventListener('submit', function(e) {

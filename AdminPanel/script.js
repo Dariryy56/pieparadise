@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция для прокрутки вверх
     const scrollToTopButton = document.getElementById('scrollToTop');
     if (scrollToTopButton) {
-        window.onscroll = function() {
+        window.onscroll = function () {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 scrollToTopButton.style.display = "block";
             } else {
                 scrollToTopButton.style.display = "none";
             }
         };
-        scrollToTopButton.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+        scrollToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     }
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.close-modal');
     const editForm = document.getElementById('editForm');
     const formFields = document.getElementById('formFields');
-    
+
     if (closeModal) {
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Обработчики для кнопок действий
     document.querySelectorAll('.action-btn').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const table = this.dataset.table;
-            const action = this.classList.contains('add') ? 'add' : 
-                          this.classList.contains('edit') ? 'edit' : 'delete';
-            
+            const action = this.classList.contains('add') ? 'add' :
+                this.classList.contains('edit') ? 'edit' : 'delete';
+
             const tableCard = this.closest('.table-card');
             let selectedId = null;
-            
+
             // Получаем ID выбранной строки (если есть)
             const selectedRow = tableCard.querySelector('.selected-row');
             if (selectedRow) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Заполняем скрытые поля формы
             document.getElementById('modalTable').value = table;
             document.getElementById('modalAction').value = action;
-            
+
             if (action === 'edit' || action === 'delete') {
                 if (!selectedId) {
                     alert('Пожалуйста, выберите запись для ' + (action === 'edit' ? 'редактирования' : 'удаления'));
@@ -62,27 +62,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Заполняем модальное окно в зависимости от действия
             formFields.innerHTML = '';
-            
+
             if (action === 'add' || action === 'edit') {
                 fetch(`../api/get_table_structure.php?table=${table}`)
                     .then(response => response.json())
                     .then(columns => {
                         columns.forEach(col => {
                             if (col.Field !== 'id') {
-                                const value = (action === 'edit' && selectedRow) ? 
-                                    selectedRow.querySelector(`td[data-column="${col.Field}"]`).textContent : '';
-                                
-                                // Добавляем атрибут required для всех полей
-                                formFields.innerHTML += `
-                                    <div class="form-group">
-                                        <label for="${col.Field}">${col.Field}</label>
-                                        <input type="text" id="${col.Field}" 
-                                               name="data[${col.Field}]" 
-                                               value="${value}"
-                                               placeholder="${col.Type}"
-                                               required>
-                                    </div>
-                                `;
+                                const value = (action === 'edit' && selectedRow) ? selectedRow.querySelector(`td[data-column="${col.Field}"]`).textContent : '';
+
+                                // Проверяем, если поле — внешний ключ, то делаем select
+                                if (['user_id', 'product_id', 'category_id'].includes(col.Field)) {
+                                    formFields.innerHTML += `
+        <div class="form-group">
+          <label for="${col.Field}">${col.Field}</label>
+          <select id="${col.Field}" name="data[${col.Field}]" required>
+            <option value="">Загрузка...</option>
+          </select>
+        </div>
+      `;
+                                } else {
+                                    formFields.innerHTML += `
+        <div class="form-group">
+          <label for="${col.Field}">${col.Field}</label>
+          <input type="text" id="${col.Field}" name="data[${col.Field}]" value="${value}" placeholder="${col.Type}" required>
+        </div>
+      `;
+                                }
+                            }
+                        });
+
+                        // После формирования формы подгружаем опции для select
+
+                        ['user_id', 'product_id', 'category_id'].forEach(field => {
+                            const select = document.getElementById(field);
+                            if (select) {
+                                fetch(`../api/get_fk_options.php?field=${field}`)
+                                    .then(res => res.json())
+                                    .then(options => {
+                                        select.innerHTML = '<option value="">Выберите</option>';
+                                        options.forEach(opt => {
+                                            // Если редактируем, то ставим выбранное значение
+                                            const selected = (action === 'edit' && selectedRow && selectedRow.querySelector(`td[data-column="${field}"]`).textContent == opt.id) ? 'selected' : '';
+                                            select.innerHTML += `<option value="${opt.id}" ${selected}>${opt.id} - ${opt.name || opt.title}</option>`;
+                                        });
+                                    })
+                                    .catch(() => {
+                                        select.innerHTML = '<option value="">Ошибка загрузки</option>';
+                                    });
                             }
                         });
                         modal.style.display = 'flex';
@@ -99,15 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Выделение строк таблицы
     document.querySelectorAll('.admin-table tbody tr').forEach(row => {
-        row.addEventListener('click', function() {
+        row.addEventListener('click', function () {
             // Снимаем выделение со всех строк
             this.closest('table').querySelectorAll('tr').forEach(r => {
                 r.classList.remove('selected-row');
             });
-            
+
             // Выделяем текущую строку
             this.classList.add('selected-row');
-            
+
             // Помечаем ячейки для поиска данных
             const cells = this.querySelectorAll('td');
             const headers = this.closest('table').querySelectorAll('th');
@@ -127,24 +154,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Пожалуйста, заполните все обязательные поля!');
                 return;
             }
-            
+
             const formData = new FormData(editForm);
-            
+
             fetch('', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.ok) {
-                    location.reload();
-                } else {
-                    throw new Error('Ошибка сервера');
-                }
-            })
-            .catch(error => {
-                console.error('Ошибка:', error);
-                alert('Произошла ошибка: ' + error.message);
-            });
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        throw new Error('Ошибка сервера');
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка: ' + error.message);
+                });
         });
     }
 
@@ -152,9 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function adjustFooterPosition() {
         const tablesContainer = document.querySelector('.tables-container');
         const footer = document.querySelector('.view-12');
-        
+
         if (!tablesContainer || !footer) return;
-        
+
         const containerHeight = tablesContainer.offsetHeight;
         const minTop = 800;
         footer.style.top = `${containerHeight + minTop}px`;

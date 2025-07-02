@@ -2148,3 +2148,56 @@ html {
   height: 60px;
   filter: brightness(0) invert(1); /* Делает стрелку белой */
 }
+
+/* Стили для кнопок категорий */
+.view-4, .view-5, .view-6, .view-7, .view-8, .view-9, .view-10 {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+}
+
+.overlap-4, .overlap-5, .overlap-6 {
+    transition: all 0.3s ease;
+    position: relative;
+    height: 74px; /* Исходная высота */
+    box-shadow: 0 2px 5px rgba(119, 22, 41, 0.2);
+}
+
+/* Эффект при наведении - удлинение на 10px */
+.view-4:hover .overlap-4,
+.view-5:hover .overlap-5,
+.view-6:hover .overlap-6,
+.view-7:hover .overlap-6,
+.view-8:hover .overlap-6,
+.view-9:hover .overlap-6,
+.view-10:hover .overlap-6 {
+    height: 85px; /* Увеличиваем высоту на 10px */
+  background-color: #8a1e34;
+     box-shadow: 0 2px 5px rgba(119, 22, 41, 0.2);
+}
+
+/* Анимация текста внутри кнопок */
+.text-wrapper-16,
+.text-wrapper-17,
+.text-wrapper-18,
+.text-wrapper-19 {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.view-4:hover .text-wrapper-16,
+.view-5:hover .text-wrapper-17,
+.view-6:hover .text-wrapper-18,
+.view-7:hover .text-wrapper-19,
+.view-8:hover .text-wrapper-19,
+.view-9:hover .text-wrapper-19,
+.view-10:hover .text-wrapper-19 {
+    top: 27px; 
+  /* Сдвигаем текст вниз вместе с кнопкой */
+}
+
+
+
+.view-4 .text-wrapper-16 {
+    font-weight: 600; /* Жирный шрифт для активной кнопки */
+}

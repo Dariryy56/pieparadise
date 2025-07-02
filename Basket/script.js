@@ -250,15 +250,32 @@ async function submitOrder() {
         }
     });
     
-    // Специальная проверка для телефона
     const phoneInput = document.getElementById('phone');
-    const phoneError = document.getElementById('phone-error');
-    if (!phoneInput.value.match(/^\+7\d{10}$/)) {
-        phoneInput.style.borderColor = '#dd1141';
-        phoneError.textContent = 'Телефон должен быть в формате +7xxxxxxxxxx';
+const phoneError = document.getElementById('phone-error');
+
+const phoneRaw = phoneInput.value.trim();
+
+// Разрешенные символы: цифры, пробел, дефис, скобки, плюс
+const allowedCharsRegexp = /^[\d\s\-\+\(\)]+$/;
+
+// Проверяем разрешенные символы
+if (!allowedCharsRegexp.test(phoneRaw)) {
+    phoneError.textContent = 'Телефон содержит недопустимые символы';
+    phoneError.style.display = 'block';
+    isValid = false;
+} else {
+    // Удаляем из строки все кроме цифр
+    const digitsOnly = phoneRaw.replace(/\D/g, '');
+
+    // Проверяем, что номер начинается с 7 и длина 11 цифр
+    if (digitsOnly.length !== 11 || digitsOnly[0] !== '7') {
+        phoneError.textContent = 'Телефон должен начинаться с +7 и содержать 11 цифр';
         phoneError.style.display = 'block';
         isValid = false;
+    } else {
+        phoneError.style.display = 'none';
     }
+}
     
     if (!isValid) return;
 

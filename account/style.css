@@ -1120,7 +1120,7 @@
   left: 100px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color: #fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
@@ -1137,7 +1137,7 @@
   left: 90px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color: #fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
@@ -1154,7 +1154,7 @@
   left: 110px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color: #fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
@@ -1171,7 +1171,7 @@
   left: 80px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color: #fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
@@ -1188,45 +1188,31 @@
   left: 140px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color:#fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
   line-height: normal;
   border: #ffffff00; 
-  color: #771629;
+   color: #771629;
 }
 
 .Label-7 {
-  width: 300px; 
-  box-sizing: border-box; 
-  top: 0px;
-  left: 140px;
-  font-family: "Palatino Linotype-Regular", Helvetica;
-  font-size: 30px;
-  background-color: #FFF2F2;
-  white-space: nowrap;
-  position: absolute;
-  letter-spacing: 0;
-  line-height: normal;
-  border: #ffffff00; 
-  color: #771629;
+ width: 300px;
+    box-sizing: border-box;
+    top: 0px;
+    left: 140px;
+    font-family: "Palatino Linotype-Regular", Helvetica;
+    font-size: 28px;
+    background-color: #fff2f2;
+    white-space: nowrap;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+    border: #ffffff00;
+    color: #771629;
 }
 
-.Label-6 {
-  width: 820px; 
-  box-sizing: border-box; 
-  margin: 10px;
-  font-family: "Playfair", Helvetica;
-  font-size: 30px;
-  background-color: #FFF2F2;
-  white-space: nowrap;
-  position: absolute;
-  letter-spacing: 0;
-  line-height: normal;
-  border: #ffffff00; 
-  color: #771629;
-}
 
 .Label-8 {
   width: 550px; 
@@ -1235,7 +1221,7 @@
   left: 300px;
   font-family: "Playfair", Helvetica;
   font-size: 30px;
-  background-color: #FFF2F2;
+  background-color:#fff2f2;
   white-space: nowrap;
   position: absolute;
   letter-spacing: 0;
@@ -1255,21 +1241,16 @@
 
 
 .text-wrapper-10 {
-    background-color: #f8f8f8;
+    background-color:#fff2f2;
     padding: 8px 10px;
     border-radius: 0px;
     transition: all 0.3s;
 }
 
 .Label-1[readonly], .Label-2[readonly], .Label-3[readonly], 
-.Label-4[readonly], .Label-5[readonly], .Label-6[readonly]
+.Label-4[readonly], .Label-5[readonly], .Label-7[readonly]
  {
     border: 1px solid #eeeeee00;
-}
-
-.Label-7[readonly]{
- font-family: "Palatino Linotype-Regular", Helvetica;
-  background-color: #00000000;
 }
 
 .screen .text-wrapper-800 {
@@ -1305,23 +1286,6 @@ input:focus{
 }
 
 
-
-/* Стили для полей ввода */
-.Label-1, .Label-2, .Label-3, .Label-4, 
-.Label-5, .Label-7, .Label-8 {
-    box-sizing: border-box;
-    background-color: #FFF2F2;
-    border: 1px solid #fff2f2;
-    color: #771629;
-    font-family: "Playfair", Helvetica;
-    font-size: 30px;
-}
-
-/* Стили для заблокированных полей */
-input[readonly] {
-    background-color: #fff2f2;
-    border: 1px solid #fff2f2;
-}
 
 /* Стили для кнопок */
 .text-wrapper-10, .text-wrapper-11 {
@@ -1893,4 +1857,11 @@ input[readonly] {
     transform: translateY(-3px);
     box-shadow: 0 7px 20px rgba(198, 66, 67, 0.4);
     background: linear-gradient(135deg, #dd1141, #9e102f);
+}
+
+#phone {
+    position: relative;
+    z-index: 20;
+    background-color:#fff2f200;
+    pointer-events: auto;
 }

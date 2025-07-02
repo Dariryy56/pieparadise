@@ -22,3 +22,19 @@ a {
   src: url("https://anima-uploads.s3.amazonaws.com/projects/5fc6f4c843b9a963f45d1bca/files/palatino-linotype.ttf")
     format("truetype");
 }
+
+
+/* AdminPanel/globals.css */
+/* ... существующие стили ... */
+
+/* Базовые стили для всех выпадающих списков */
+select {
+    font-family: "Playfair", Helvetica;
+    font-size: 18px;
+    color: #771629;
+    background-color: #fff2f2;
+    border: 1px solid #c94559;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}

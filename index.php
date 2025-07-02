@@ -138,7 +138,7 @@
       <div class="element-7">
         <div class="overlap-5">
           <div class="view-8"></div>
-          <img class="ellipse-5" src="222img/ellipse-40.png" alt="Декоративный элемент">
+          <img class="ellipse-5" src="https://c.animaapp.com/isGn6BhB/img/ellipse-4.svg" alt="Декоративный элемент">
           <div class="view-9">
             <div class="overlap-group-4">
               <div class="ellipse-6"></div>
@@ -157,7 +157,7 @@
           </div>
           <div class="element-9">
               <a href="./menu/5Cakes.html"><div class="overlap-6">
-              <div class="text-wrapper-14">Молочная шоколданая вишня</div>
+              <div class="text-wrapper-14">Молочная шоколадная вишня</div>
               <div class="text-wrapper-15">руб.</div>
               <div class="text-wrapper-16">160</div>
               <img class="image-5" src="222img/новыетовары3.png" alt="Новый товар">

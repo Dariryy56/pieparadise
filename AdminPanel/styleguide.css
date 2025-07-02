@@ -36,3 +36,24 @@
   --apple-com-segoe-UI-regular-line-height: 36px;
   --apple-com-segoe-UI-regular-font-style: normal;
 }
+
+
+/* AdminPanel/styleguide.css */
+/* ... существующие стили ... */
+
+/* Стили для контейнера выпадающего списка */
+.select-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.select-container::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c94559;
+    pointer-events: none;
+}
